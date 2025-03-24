@@ -11,7 +11,7 @@ workflows:
     scripts:
       - name: "Install dependencies"
         script: "flutter pub get"
-      - name: "Build iOS Release (No Codesign)"
-        script: "flutter build ios --release --no-codesign"
+      - name: "Build iOS IPA"
+        script: "flutter build ipa --release"
     artifacts:
-      - "build/ios/iphoneos/*.ipa"
+      - "build/ios/ipa/*.ipa"
