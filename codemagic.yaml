@@ -1,13 +1,13 @@
 workflows:
   ios_build:
-    name: Karzararv2 iOS Build
+    name: Karzararv3 iOS Build
     instance_type: mac_mini
     max_build_duration: 60
     environment:
       flutter: stable
       xcode: latest
       vars:
-        APP_BUNDLE_ID:"com.example.karzararv3"
+        APP_BUNDLE_ID: com.example.karzararv3
     scripts:
       - name: Install dependencies
         script: flutter pub get
