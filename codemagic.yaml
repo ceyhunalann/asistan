@@ -1,17 +1,17 @@
 workflows:
   ios_build:
-    name: Karzararv3 iOS Build
-    instance_type: mac_mini
+    name: "Karzararv3 iOS Build"
+    instance_type: mac_mini_m1
     max_build_duration: 60
     environment:
-      flutter: stable
-      xcode: latest
+      flutter: "stable"
+      xcode: "latest"
       vars:
-        APP_BUNDLE_ID: com.example.karzararv3
+        APP_BUNDLE_ID: "com.example.karzararv3"
     scripts:
-      - name: Install dependencies
-        script: flutter pub get
-      - name: Build iOS Release (No Codesign)
-        script: flutter build ios --release --no-codesign
+      - name: "Install dependencies"
+        script: "flutter pub get"
+      - name: "Build iOS Release (No Codesign)"
+        script: "flutter build ios --release --no-codesign"
     artifacts:
-      - build/ios/iphoneos/*.ipa
+      - "build/ios/iphoneos/*.ipa"
